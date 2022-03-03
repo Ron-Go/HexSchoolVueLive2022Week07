@@ -1,7 +1,8 @@
 <template lang="">
-  <h1>home</h1>
+  <div>
+    <router-view></router-view>
+  </div>
 </template>
-
 <script>
 export default {
 };
