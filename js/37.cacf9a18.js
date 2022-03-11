@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkproject2022"]=self["webpackChunkproject2022"]||[]).push([[37],{37:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var t=r(252);function u(e,n,r,u,c,o){return(0,t.wg)(),(0,t.iD)("h1",null,"home")}var c={},o=r(744);const a=(0,o.Z)(c,[["render",u]]);var f=a}}]);
