@@ -20,7 +20,7 @@
               <router-link class="nav-link" to="/admin/coupon">優惠券</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="" @click="logout">登出</router-link>
+              <router-link class="nav-link" to="/admin/logout">登出</router-link>
             </li>
           </ul>
         </div>
@@ -50,17 +50,17 @@ export default {
           console.dir(err);
         });
     },
-    logout() {
-      this.axios
-        .post(`${process.env.VUE_APP_API}/logout`)
-        .then(() => {
-          // 跳頁到登入頁面
-          this.$router.push('/front/login');
-        })
-        .catch((err) => {
-          console.dir(err);
-        });
-    },
+    // logout() {
+    //   this.axios
+    //     .post(`${process.env.VUE_APP_API}/logout`)
+    //     .then(() => {
+    //       // 跳頁到登入頁面
+    //       this.$router.push('/front/login');
+    //     })
+    //     .catch((err) => {
+    //       console.dir(err);
+    //     });
+    // },
   },
 };
 </script>

@@ -101,7 +101,6 @@ export default {
     };
   },
   mounted() {
-    console.log(this.tempCoupon.due_date);
   },
   watch: {
     coupon() {

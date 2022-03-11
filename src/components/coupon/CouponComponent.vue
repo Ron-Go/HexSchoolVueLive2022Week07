@@ -97,7 +97,6 @@ export default {
       this.axios
         .get(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupons/?page=${page}`)
         .then((res) => {
-          console.log(res);
           this.tempCoupons = res.data.coupons;
           this.pagination = res.data.pagination;
           this.convertDate();
@@ -113,7 +112,6 @@ export default {
       this.tempCoupons.forEach((value, index) => {
         // Unix時間，單位/秒 => 單位/毫秒
         const date = new Date(value.due_date * 1000).toISOString().split('T');
-        console.log(date);
         [this.tempCoupons[index].due_date] = date;
       });
     },
@@ -160,7 +158,6 @@ export default {
         // 修改商品
         this.axios.put(`${process.env.VUE_APP_API}/api/${process.env.VUE_APP_PATH}/admin/coupon/${coupon.id}`, { data: coupon })
           .then((res) => {
-            console.log(res);
             // 修改商品，再重新取得全部資料渲染
             // 修改完商品，getData()不使用參數預設值，代入當前頁數，避免跳回第一頁
             this.getData(this.pagination.current_page);

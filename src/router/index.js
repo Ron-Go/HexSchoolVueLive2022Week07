@@ -38,6 +38,11 @@ const routes = [
         path: 'coupon',
         component: () => import('../components/coupon/CouponComponent.vue'),
       },
+      // 登出
+      {
+        path: 'logout',
+        component: () => import('../components/LogOut.vue'),
+      },
     ],
   },
 ];
